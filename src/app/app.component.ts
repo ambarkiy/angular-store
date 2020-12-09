@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Store, StoreService } from './domain';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-store';
+  store: Store;
+
+  constructor(private storeService: StoreService) {
+    this.store = this.storeService.get();
+  }
+
 }

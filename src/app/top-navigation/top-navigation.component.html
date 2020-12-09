@@ -1,13 +1,13 @@
 <div fxLayout="row" fxLayoutAlign="space-between center" class="container test">
-    <div>Sucré Salé</div>
+    <div>{{store.brand}}</div>
     <div fxLayout="row" fxLayoutGap="1rem">
         <address>
             <div>
-                Sucré Salé
+                {{store.brand}}
                 <br>
-                8 pl 3 Rois
+                {{store.address.street}}
                 <br>
-                60180 NOGENT SUR OISE
+                {{store.address.zip}} {{store.address.city}}
             </div>
         </address>
         <div fxLayout="column">
@@ -16,13 +16,13 @@
                     Horaires:
                 </div>
                 <div fxLayout="column">
-                    <div>Lundi au Samedi</div>
-                    <div>11h-14h / 18h-23h</div>
+                    <div>{{store.openingTime.days}}</div>
+                    <div>{{store.openingTime.hours}}</div>
                 </div>
             </div>
             <div fxLayout="row">
                 <div>TEL:</div>
-                <div>03 44 53 05 17</div>
+                <div>{{store.phone}}</div>
             </div>
         </div>
 
