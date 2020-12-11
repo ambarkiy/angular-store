@@ -1,7 +1,7 @@
-<div fxLayout="row" fxLayoutAlign="space-between center" class="container test">
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" class="container">
     <div>{{store.brand}}</div>
     <div fxLayout="row" fxLayoutGap="1rem">
-        <address>
+        <address class="mat-body-1" fxLayoutAlign="center center">
             <div>
                 {{store.brand}}
                 <br>
@@ -11,7 +11,7 @@
             </div>
         </address>
         <div fxLayout="column">
-            <div fxLayout="row" fxLayoutGap="0.5rem">
+            <div fxLayout="row" fxLayoutGap="0.5rem" class="mat-small" fxLayoutAlign="center">
                 <div>
                     Horaires:
                 </div>
@@ -20,11 +20,9 @@
                     <div>{{store.openingTime.hours}}</div>
                 </div>
             </div>
-            <div fxLayout="row">
-                <div>TEL:</div>
-                <div>{{store.phone}}</div>
+            <div fxLayout="row" class="mat-body-strong">
+                <div>TEL : {{store.phone}}</div>
             </div>
         </div>
-
     </div>
-</div>
+</mat-toolbar>
