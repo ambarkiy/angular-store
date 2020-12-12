@@ -9,6 +9,7 @@ import { Store } from '../domain';
 export class TopNavigationComponent implements OnInit {
 
   @Input() store: Store;
+  @Input() color: string;
 
   constructor() { }
 

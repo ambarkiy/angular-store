@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { STORE } from '../data/store.data';
-import { Store } from '../models/store';
+
+import { LINKS, STORE } from '../data';
+import { Link, Store } from '../models';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +13,9 @@ export class StoreService {
 
   get(): Store {
     return STORE;
+  }
+
+  getFooterLinks(): Link[] {
+    return LINKS;
   }
 }

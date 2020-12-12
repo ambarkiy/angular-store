@@ -1,16 +1,26 @@
-import { Component } from '@angular/core';
-import { Store, StoreService } from './domain';
+import { Component, OnInit } from '@angular/core';
+import { ImgRegisterService } from './common';
+import { Link, Store, StoreService } from './domain';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   store: Store;
+  links: Link[];
+  color: string;
 
-  constructor(private storeService: StoreService) {
+  // TODO: remove dependency to ImgRegisterService
+  constructor(private storeService: StoreService, private imgRegisterService: ImgRegisterService) {
+
+  }
+
+  ngOnInit(): void {
     this.store = this.storeService.get();
+    this.color = 'primary';
+    this.links = this.storeService.getFooterLinks();
   }
 
 }

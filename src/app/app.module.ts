@@ -6,19 +6,25 @@ import { TopNavigationComponent } from './top-navigation/top-navigation.componen
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { FooterComponent } from './footer/footer.component';
+import { LinkSectionPipe } from './link-section.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopNavigationComponent
+    TopNavigationComponent,
+    FooterComponent,
+    LinkSectionPipe,
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule 
   ],
-  providers: [],
+  providers: [  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,4 @@
-import { Address } from './models/address';
-import { OpeningTime } from './models/opening-time';
-import { Store } from './models/store';
-import { StoreService } from './services/store.service';
+import { Link, LinkSection, Store } from "./models";
+import { StoreService } from "./services";
 
-export {Address,OpeningTime,Store,StoreService}
+export {StoreService, Store, Link, LinkSection}

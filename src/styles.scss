@@ -33,6 +33,13 @@ $angular-store-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($angular-store-theme);
 
+:root {
+  --color-primary: #{mat-color($angular-store-primary)};
+  --color-accent: #{mat-color($angular-store-accent)};
+  --color-warn: #{mat-color($angular-store-warn)};
+}
+
+
 /* You can add global styles to this file, and also import other style files */
 .test{
     border: solid red 1px;

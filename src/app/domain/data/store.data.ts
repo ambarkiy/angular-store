@@ -15,3 +15,5 @@ export const STORE: Store = {
         days: 'Lundi au Samedi', hours: '11h-14h / 18h-23h'
     }
 } 
+
+

@@ -1,0 +1,26 @@
+<div class="container" fxFlex fxLayout="row" fxLayoutAlign="space-around stretch">
+    <div>
+        <mat-nav-list>
+            <a mat-list-item [href]=[link.href]
+                *ngFor="let link of links | linkSection : LinkSection.ADMIN">{{link.text}}</a>
+        </mat-nav-list>
+    </div>
+    <div>
+        <mat-nav-list>
+            <a mat-list-item [href]=[link.href]
+                *ngFor="let link of links | linkSection : LinkSection.CATEGORY">{{link.text}}</a>
+        </mat-nav-list>
+    </div>
+    <div>
+        <mat-nav-list>
+            <a mat-list-item [href]=[link.href]
+                *ngFor="let link of links | linkSection : LinkSection.SOCIAL">{{link.text}}</a>
+        </mat-nav-list>
+    </div>
+    <div fxLayoutAlign="center end">
+        <div fxLayoutAlign=" center" fxLayoutGap="1rem" class="brand mat-title">
+            <span><i>{{brand}}</i></span>
+            <mat-icon svgIcon="logo"></mat-icon>
+        </div>
+    </div>
+</div>
