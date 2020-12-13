@@ -1,6 +1,8 @@
 <div fxLayout="column" class="container">
     <app-top-navigation [store]="store" [color]="color"></app-top-navigation>
-    <div class="test" fxFlex></div>
+    <div class="test" fxFlex>
+        <app-store-item></app-store-item>
+    </div>
     <app-footer class="footer" [links]="links" [brand]="store.brand"></app-footer>
 
 </div>
