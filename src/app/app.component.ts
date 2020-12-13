@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   store: Store;
   links: Link[];
   color: string;
-  storeItem: StoreItem;
+  storeItems: StoreItem[];
 
   // TODO: remove dependency to ImgRegisterService
   constructor(private storeService: StoreService, private imgRegisterService: ImgRegisterService) {
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     this.store = this.storeService.get();
     this.color = 'primary';
     this.links = this.storeService.getFooterLinks();
-    this.storeItem = { name: 'Végétarienne', price: 10, description: 'Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches', img: '/assets/images/store/pizzas-vegetarienne.png' };
+    this.storeItems =this.storeService.getItems(); 
   }
 
 }

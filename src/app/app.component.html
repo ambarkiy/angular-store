@@ -1,8 +1,11 @@
 <div fxLayout="column" class="container">
     <app-top-navigation [store]="store" [color]="color"></app-top-navigation>
-    <div class="test" fxFlex>
-        <app-store-item [storeItem]="storeItem"></app-store-item>
+    <div fxFlex class="main">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem grid">
+            <ng-container *ngFor="let storeItem of storeItems">
+                <app-store-item fxFlex="20%" [storeItem]="storeItem"></app-store-item>
+            </ng-container>
+        </div>
     </div>
     <app-footer class="footer" [links]="links" [brand]="store.brand"></app-footer>
-
 </div>
