@@ -1,11 +1,11 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>Végétarienne</mat-card-title>
-        <mat-card-subtitle>{{10 | currency }}</mat-card-subtitle>
+        <mat-card-title>{{storeItem.name}}</mat-card-title>
+        <mat-card-subtitle>{{storeItem.price | currency }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="/assets/images/store/pizzas-vegetarienne.png" >
+    <img mat-card-image [src]="storeItem.img" >
     <mat-card-content>
         <span><u> Composition : </u></span>
-        <p class="mat-caption">Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches</p>
+        <p class="mat-caption">{{storeItem.description}}</p>
     </mat-card-content>
 </mat-card>
