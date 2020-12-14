@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Link, LinkSection } from './domain';
+import { Link, LinkSection } from '../../domain';
 
 @Pipe({
   name: 'linkSection'

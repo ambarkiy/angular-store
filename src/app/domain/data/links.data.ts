@@ -9,7 +9,7 @@ export const LINKS: Link[] = [
     },
     {
         text: 'cgv',
-        href: '/cgu',
+        href: '/cgv',
         section: LinkSection.ADMIN
     },
     {

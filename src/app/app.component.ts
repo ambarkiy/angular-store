@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
     this.store = this.storeService.get();
     this.color = 'primary';
     this.links = this.storeService.getFooterLinks();
-    this.storeItems =this.storeService.getItems(); 
   }
 
 }

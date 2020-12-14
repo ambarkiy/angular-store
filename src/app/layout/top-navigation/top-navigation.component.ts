@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Store } from '../domain';
+import { Store } from '../../domain';
 
 @Component({
   selector: 'app-top-navigation',
