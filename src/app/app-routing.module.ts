@@ -9,6 +9,11 @@ const routes: Routes = [
       import('./features/login/login.module').then((m) => m.LoginModule),
   },
   {
+    path: 'admin',
+    loadChildren: () =>
+      import('./features/admin/admin.module').then((m) => m.AdminModule),
+  },
+  {
     path: 'menu',
     loadChildren: () =>
       import('./features/menu/menu.module').then((m) => m.MenuModule),
