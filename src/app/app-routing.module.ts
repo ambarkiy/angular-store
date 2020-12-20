@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthorizationGuard } from './domain';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/menu' },
@@ -10,6 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canLoad : [AuthorizationGuard],
     loadChildren: () =>
       import('./features/admin/admin.module').then((m) => m.AdminModule),
   },

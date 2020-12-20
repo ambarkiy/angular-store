@@ -10,8 +10,6 @@ const passwordAdmin = 'a';
 export class UserService {
     private _user: User;
 
-    constructor() { }
-
     login(username: string, password: string): boolean {
         if (!this.isAuthorized(username, password)) {
             return false;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/domain/services/user.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) { }
 
   ngOnInit(): void { }
@@ -27,7 +29,7 @@ export class LoginComponent implements OnInit {
     const { username, password } = this.loginForm.value;
     this.isLogged = this.userService.login(username, password);
     if (this.isLogged) {
-      console.log('user logged');
+      this.router.navigate(['/admin']);
     }
   }
 
