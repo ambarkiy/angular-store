@@ -1,7 +1,11 @@
-<div fxLayout="column" class="container">
-    <app-top-navigation [store]="store" [color]="color"></app-top-navigation>
-    <div fxFlex class="main">
+<div fxFlex fxLayout="column">
+    <div>
+        <app-top-navigation [store]="store" [color]="color"></app-top-navigation>
+    </div>
+    <div fxFlex>
         <router-outlet></router-outlet>
     </div>
-    <app-footer class="footer" [links]="links" [brand]="store.brand"></app-footer>
+    <div>
+        <app-footer class="footer" [links]="links" [brand]="store.brand"></app-footer>
+    </div>
 </div>

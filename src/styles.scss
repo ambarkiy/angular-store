@@ -44,5 +44,9 @@ $angular-store-theme: mat-light-theme((
 .test{
     border: solid red 1px;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {  height: 100vh; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+.vh-100{
+height: 100%;
+}

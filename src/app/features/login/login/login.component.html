@@ -1,0 +1,14 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <form [formGroup]="loginForm" fxLayout="column" (ngSubmit)="onSubmit()" class="container mat-elevation-z2">
+    <mat-form-field appearance="fill">
+      <mat-label>Identifiant</mat-label>
+      <input matInput formControlName="username" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Mot de passe</mat-label>
+      <input matInput formControlName="password" />
+    </mat-form-field>
+    <button mat-raised-button color="primary">CONNEXION <mat-icon>login</mat-icon></button>
+    <mat-error *ngIf="isLogged === false">Identifiant ou Mot de passe incorrecte</mat-error>
+  </form>
+</div>

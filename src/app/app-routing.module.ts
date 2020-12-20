@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/menu' },
   {
+    path: 'login',
+    loadChildren: () =>
+      import('./features/login/login.module').then((m) => m.LoginModule),
+  },
+  {
     path: 'menu',
     loadChildren: () =>
       import('./features/menu/menu.module').then((m) => m.MenuModule),

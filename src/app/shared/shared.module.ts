@@ -5,6 +5,7 @@ import { LinkSectionPipe } from './pipes/link-section.pipe';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,12 +13,14 @@ import { RouterModule } from '@angular/router';
   declarations: [LinkSectionPipe],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     MaterialModule,
     RouterModule
   ],
   exports :[
     CommonModule,
+    ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule,
     LinkSectionPipe,
