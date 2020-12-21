@@ -1,1 +1,56 @@
-ADMIN
+<div fxLayout="column">
+    <mat-toolbar color="primary">
+        Informations de la vitrine
+    </mat-toolbar>
+    <div>
+        <form [formGroup]="storeInformationForm" fxLayout="column" (ngSubmit)="onSubmit()">
+            <div fxLayout="column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nom</mat-label>
+                    <input matInput formControlName="brand">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Logo</mat-label>
+                    <input matInput formControlName="logo">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutGap="1rem">
+                <mat-form-field  fxFlex="32.5%" appearance="fill">
+                    <mat-label>Téléphone</mat-label>
+                    <input matInput formControlName="phone">
+                </mat-form-field>
+                <div fxFlex formGroupName="openingTime" fxLayoutGap="1rem">
+                    <mat-form-field fxFlex appearance="fill">
+                        <mat-label>Jours</mat-label>
+                        <input matInput formControlName="days">
+                    </mat-form-field>
+                    <mat-form-field fxFlex appearance="fill">
+                        <mat-label>Horaires</mat-label>
+                        <input matInput formControlName="hours">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div formGroupName="address" fxLayout="row" fxLayoutGap="1rem">
+                <mat-form-field fxFlex appearance="fill">
+                    <mat-label>n° + Rue,Voie, ...</mat-label>
+                    <input matInput formControlName="street">
+                </mat-form-field>
+                <mat-form-field fxFlex appearance="fill">
+                    <mat-label>Code Postal</mat-label>
+                    <input matInput formControlName="zip">
+                </mat-form-field>
+                <mat-form-field fxFlex appearance="fill">
+                    <mat-label>city</mat-label>
+                    <input matInput formControlName="city">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="end center">
+                <button mat-raised-button type="submit" color="accent">ENREGISTRER<mat-icon>save</mat-icon></button>
+            </div>
+
+
+        </form>
+    </div>
+
+</div>
