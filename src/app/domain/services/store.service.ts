@@ -9,17 +9,25 @@ import { Link, Store, StoreItem } from '../models';
 })
 export class StoreService {
 
-  constructor() { }
+  _store: Store;
 
-  get(): Store {
-    return STORE;
+  constructor() {
+    this._store = STORE;
   }
 
-  getItems(): StoreItem[]{
+  get(): Store {
+    return this._store;
+  }
+
+  getItems(): StoreItem[] {
     return STORE_ITEMS;
   }
 
   getFooterLinks(): Link[] {
     return LINKS;
+  }
+
+  update(store: Store) {
+    this._store = store;
   }
 }

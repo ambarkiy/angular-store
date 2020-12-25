@@ -23,12 +23,12 @@ export class StoreEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.store = this.storeService.get();
-    this.storeInformationForm.patchValue({...this.store})
+    this.storeInformationForm.patchValue({ ...this.store })
   }
 
   onSubmit() {
-    const inputs = this.storeInformationForm.value;
-    console.log(inputs);
+    const storeInputs = this.storeInformationForm.value;
+    this.storeService.update(storeInputs);
   }
 
 
