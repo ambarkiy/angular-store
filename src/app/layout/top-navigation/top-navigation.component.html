@@ -1,7 +1,7 @@
 <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" class="container" [color]="color">
     <div fxLayoutAlign=" center" fxLayoutGap="1rem" [routerLink]="['/']">
         <span><i>{{store.brand}}</i></span>
-        <mat-icon svgIcon="logo"></mat-icon>
+        <mat-icon [svgIcon]="store.logo"></mat-icon>
     </div>
     <div fxLayout="row" fxLayoutGap="1rem">
         <address class="mat-body-1" fxLayoutAlign="center center">

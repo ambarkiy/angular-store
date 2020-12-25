@@ -3,7 +3,7 @@ import { Store } from '../models/store';
 
 export const STORE: Store = {
     brand: "Sucré Salé",
-    logo: "",
+    logo: "logo",
     phone: "03 44 53 05 17",
     address: {
         street: '8 pl 3 Rois',
