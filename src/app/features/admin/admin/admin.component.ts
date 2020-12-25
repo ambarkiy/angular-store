@@ -8,23 +8,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AdminComponent implements OnInit {
 
-  storeInformationForm: FormGroup = this.formBuilder.group({
-    brand: '',
-    logo: '',
-    phone: '',
-    address: this.formBuilder.group({ street: '', zip: '', city: '' }),
-    openingTime: this.formBuilder.group({ days: '', hours: '' }),
-  })
+  
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor() { }
 
   ngOnInit(): void {
 
   }
-
-  onSubmit() {
-    const inputs = this.storeInformationForm.value;
-    console.log(inputs);
-  }
-
 }
