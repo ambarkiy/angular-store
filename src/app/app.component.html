@@ -1,11 +1,13 @@
-<div fxFlex fxLayout="column" >
-    <div>
-        <app-top-navigation [store]="store" [color]="color"></app-top-navigation>
-    </div>
-    <div fxFlex class="container">
-        <router-outlet></router-outlet>
-    </div>
-    <div>
-        <app-footer class="footer" [links]="links" [brand]="store.brand"></app-footer>
-    </div>
+<div fxFlex fxLayout="column">
+    <ng-container *ngIf="store$ | async as store">
+        <div>
+            <app-top-navigation [store]="store" [color]="color"></app-top-navigation>
+        </div>
+        <div fxFlex class="container">
+            <router-outlet></router-outlet>
+        </div>
+        <div>
+            <app-footer class="footer" [links]="links" [brand]="store.brand"></app-footer>
+        </div>
+    </ng-container>
 </div>

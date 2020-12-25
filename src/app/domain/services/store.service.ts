@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { LINKS, STORE, STORE_ITEMS } from '../data';
 import { Link, Store, StoreItem } from '../models';
@@ -9,14 +10,13 @@ import { Link, Store, StoreItem } from '../models';
 })
 export class StoreService {
 
-  _store: Store;
+  _storeBS = new BehaviorSubject<Store>(STORE);
 
   constructor() {
-    this._store = STORE;
   }
 
-  get(): Store {
-    return this._store;
+  get(): Observable<Store> {
+    return this._storeBS.asObservable();
   }
 
   getItems(): StoreItem[] {
@@ -28,6 +28,6 @@ export class StoreService {
   }
 
   update(store: Store) {
-    this._store = store;
+    this._storeBS.next(store);
   }
 }

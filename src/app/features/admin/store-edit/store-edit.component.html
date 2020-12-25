@@ -2,7 +2,7 @@
     <mat-toolbar color="primary">
         Informations de la vitrine
     </mat-toolbar>
-    <div>
+    <div *ngIf="store$ | async as store">
         <form [formGroup]="storeInformationForm" fxLayout="column" (ngSubmit)="onSubmit()">
             <div fxLayout="column">
                 <mat-form-field appearance="fill">
@@ -30,7 +30,6 @@
                     </mat-form-field>
                 </div>
             </div>
-
             <div formGroupName="address" fxLayout="row" fxLayoutGap="1rem">
                 <mat-form-field fxFlex appearance="fill">
                     <mat-label>n° + Rue,Voie, ...</mat-label>
@@ -48,8 +47,6 @@
             <div fxLayout="row" fxLayoutAlign="end center">
                 <button mat-raised-button type="submit" color="accent">ENREGISTRER<mat-icon>save</mat-icon></button>
             </div>
-
-
         </form>
     </div>
 

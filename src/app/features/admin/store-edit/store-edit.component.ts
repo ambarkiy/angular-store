@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { Store, StoreService } from 'src/app/domain';
 
 @Component({
@@ -9,7 +11,7 @@ import { Store, StoreService } from 'src/app/domain';
 })
 export class StoreEditComponent implements OnInit {
 
-  store: Store;
+  store$: Observable<Store>;
 
   storeInformationForm: FormGroup = this.formBuilder.group({
     brand: '',
@@ -22,8 +24,7 @@ export class StoreEditComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private storeService: StoreService) { }
 
   ngOnInit(): void {
-    this.store = this.storeService.get();
-    this.storeInformationForm.patchValue({ ...this.store })
+    this.store$ = this.storeService.get().pipe(tap((store)=>  this.storeInformationForm.patchValue({ ...store })));
   }
 
   onSubmit() {
