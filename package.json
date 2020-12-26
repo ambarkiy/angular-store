@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "front": "ng serve",
+    "server": "json-server --watch src/app/domain/data/db.json --port 4000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "all": "npm-run-all --parallel front server"
   },
   "private": true,
   "dependencies": {
