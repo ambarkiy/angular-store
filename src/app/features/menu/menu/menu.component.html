@@ -1,5 +1,7 @@
-<div fxLayout="row wrap" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem grid">
-    <ng-container *ngFor="let storeItem of storeItems">
-        <app-store-item fxFlex="20%" [storeItem]="storeItem"></app-store-item>
-    </ng-container>
-</div>
+<ng-container *ngIf="storeItems$ | async as storeItems">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem grid">
+        <ng-container *ngFor="let storeItem of storeItems">
+            <app-store-item fxFlex="20%" [storeItem]="storeItem"></app-store-item>
+        </ng-container>
+    </div>
+</ng-container>

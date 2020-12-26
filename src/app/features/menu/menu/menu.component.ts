@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 import { StoreItem, StoreService } from 'src/app/domain';
 
 @Component({
@@ -7,12 +8,12 @@ import { StoreItem, StoreService } from 'src/app/domain';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  storeItems: StoreItem[];
+  storeItems$: Observable<StoreItem[] | null>;
 
   constructor(private storeService: StoreService) { }
 
   ngOnInit(): void {
-    this.storeItems =this.storeService.getItems(); 
+    this.storeItems$ =this.storeService.getItems(); 
   }
 
 }

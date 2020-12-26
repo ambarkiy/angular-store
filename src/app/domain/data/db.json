@@ -1,6 +1,6 @@
 {
   "store": {
-    "brand": "Sucré Saléee",
+    "brand": "Sucré Saléeezz",
     "logo": "logo",
     "phone": "03 44 53 05 17",
     "address": {
@@ -12,5 +12,198 @@
       "days": "Lundi au Samedi",
       "hours": "11h-14h / 18h-23h"
     }
-  }
+  },
+  "store-items": [
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    },
+    {
+      "name": "Végétarienne",
+      "price": 10,
+      "description": "Base tomate, mozzarella, champignons frais, oignons frais, poivrons, tomates fraîches",
+      "img": "/assets/images/store/pizzas-vegetarienne.png"
+    }
+  ],
+  "store-footer-links": [
+    {
+      "text": "cgu",
+      "href": "/cgu",
+      "section": "admin"
+    },
+    {
+      "text": "cgv",
+      "href": "/cgv",
+      "section": "admin"
+    },
+    {
+      "text": "pizzas",
+      "href": "/pizzas",
+      "section": "category"
+    },
+    {
+      "text": "sandwichs",
+      "href": "/pizzas",
+      "section": "category"
+    },
+    {
+      "text": "assiettes",
+      "href": "/assiettes",
+      "section": "category"
+    },
+    {
+      "text": "burgers",
+      "href": "/burgers",
+      "section": "category"
+    },
+    {
+      "text": "facebook",
+      "href": "/facebook",
+      "section": "social"
+    },
+    {
+      "text": "snap",
+      "href": "/span",
+      "section": "social"
+    },
+    {
+      "text": "instagram",
+      "href": "/instagram",
+      "section": "social"
+    }
+  ]
 }

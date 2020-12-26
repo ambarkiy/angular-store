@@ -6,8 +6,11 @@
         <div fxFlex class="container">
             <router-outlet></router-outlet>
         </div>
-        <div>
-            <app-footer class="footer" [links]="links" [brand]="store.brand"></app-footer>
-        </div>
+        <ng-container *ngIf="links$ | async as links">
+            <div>
+                <app-footer class="footer" [links]="links" [brand]="store.brand"></app-footer>
+            </div>
+        </ng-container>
+       
     </ng-container>
 </div>

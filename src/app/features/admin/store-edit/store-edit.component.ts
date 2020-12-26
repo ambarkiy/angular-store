@@ -1,4 +1,4 @@
-import { Component, OnInit, Pipe } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -11,7 +11,7 @@ import { Store, StoreService } from 'src/app/domain';
 })
 export class StoreEditComponent implements OnInit {
 
-  store$: Observable<Store>;
+  store$: Observable<Store | null>;
 
   storeInformationForm: FormGroup = this.formBuilder.group({
     brand: '',

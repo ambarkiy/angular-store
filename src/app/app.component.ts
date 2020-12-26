@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ImgRegisterService } from './common';
 import { Link, Store, StoreService } from './domain';
-import { StoreItem } from './domain/models';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +9,9 @@ import { StoreItem } from './domain/models';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  store$: Observable<Store>;
-  links: Link[];
+  store$: Observable<Store | null>;
+  links$: Observable<Link[] | null>;
   color: string;
-  storeItems: StoreItem[];
 
   // TODO: remove dependency to ImgRegisterService
   constructor(private storeService: StoreService, private imgRegisterService: ImgRegisterService) {
@@ -23,7 +21,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.store$ = this.storeService.get();
     this.color = 'primary';
-    this.links = this.storeService.getFooterLinks();
+    this.links$ = this.storeService.getFooterLinks();
   }
 
 }
