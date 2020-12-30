@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { Store, StoreService } from 'src/app/domain';
+import { Store, StoreService } from '../../../domain';
 
 @Component({
   selector: 'app-store-edit',
