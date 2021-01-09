@@ -1,11 +1,13 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AdminComponent } from "./admin/admin.component";
-import { StoreEditComponent } from "./store-edit/store-edit.component";
+import { StoreEditFormComponent } from "./store-edit-form/store-edit-form.component";
+import { StoreItemEditFormComponent } from "./store-item-edit-form/store-item-edit-form.component";
 
 const routes: Routes = [
   { path: '', component: AdminComponent },
-  { path: 'store-edit', component: StoreEditComponent }
+  { path: 'store-edit', component: StoreEditFormComponent },
+  { path: 'store-item-edit', component: StoreItemEditFormComponent },
 ];
 
 @NgModule({

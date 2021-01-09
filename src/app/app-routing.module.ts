@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthorizationGuard } from './domain';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/menu' },

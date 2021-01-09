@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title>{{storeItem.name}}</mat-card-title>
+            <mat-card-subtitle>{{storeItem.price | currency }}</mat-card-subtitle>
+        </mat-card-title-group>
+        <div fxFlex></div>
+        <div fxLayoutAlign="start start" >
+            <button mat-stroked-button [routerLink]="['/admin/store-item-edit']" [queryParams]="{name: storeItem.name}">EDITER<mat-icon>edit</mat-icon></button>
+        </div>
+       </mat-card-header> 
+    <img mat-card-image [src]="storeItem.img" >
+    <mat-card-content>
+        <span><u> Composition : </u></span>
+        <p class="mat-caption">{{storeItem.description}}</p>
+    </mat-card-content>
+   </mat-card>

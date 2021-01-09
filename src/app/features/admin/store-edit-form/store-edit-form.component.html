@@ -3,7 +3,7 @@
         Informations de la vitrine
     </mat-toolbar>
     <div *ngIf="store$ | async as store">
-        <form [formGroup]="storeInformationForm" fxLayout="column" (ngSubmit)="onSubmit()">
+        <form [formGroup]="storeEditForm" fxLayout="column" (ngSubmit)="onSubmit()">
             <div fxLayout="column">
                 <mat-form-field appearance="fill">
                     <mat-label>Nom</mat-label>

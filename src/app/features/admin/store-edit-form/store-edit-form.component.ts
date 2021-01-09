@@ -5,15 +5,15 @@ import { tap } from 'rxjs/operators';
 import { Store, StoreService } from '../../../domain';
 
 @Component({
-  selector: 'app-store-edit',
-  templateUrl: './store-edit.component.html',
-  styleUrls: ['./store-edit.component.scss']
+  selector: 'app-store-edit-form',
+  templateUrl: './store-edit-form.component.html',
+  styleUrls: ['./store-edit-form.component.scss']
 })
-export class StoreEditComponent implements OnInit {
+export class StoreEditFormComponent implements OnInit {
 
   store$: Observable<Store | null>;
 
-  storeInformationForm: FormGroup = this.formBuilder.group({
+  storeEditForm: FormGroup = this.formBuilder.group({
     brand: '',
     logo: '',
     phone: '',
@@ -24,11 +24,11 @@ export class StoreEditComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private storeService: StoreService) { }
 
   ngOnInit(): void {
-    this.store$ = this.storeService.get().pipe(tap((store)=>  this.storeInformationForm.patchValue({ ...store })));
+    this.store$ = this.storeService.get().pipe(tap((store)=>  this.storeEditForm.patchValue({ ...store })));
   }
 
   onSubmit() {
-    const storeInputs = this.storeInformationForm.value;
+    const storeInputs = this.storeEditForm.value;
     this.storeService.update(storeInputs);
   }
 
