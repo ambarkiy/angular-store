@@ -1,6 +1,9 @@
-<mat-card> 
+<mat-card>
     <mat-card-header>
         <mat-card-subtitle>{{storeImage.name}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="storeImage.img">
+    <mat-card-actions>
+        <button mat-button (click)="deleteStoreImage(storeImage)">SUPPRIMER</button>
+    </mat-card-actions>
 </mat-card>

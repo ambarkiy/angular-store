@@ -46,4 +46,22 @@ export class StoreImageService {
         );
 
     }
+
+    deleteItem(storeImage:StoreImage):void{
+        console.log(storeImage);
+        this.httpClient.delete(`${IMAGES_API}/store-images/${storeImage.name}`).toPromise().then(
+            () => {
+                this.httpClient.get<StoreImage[]>(`${IMAGES_API}/store-images`).toPromise().then(storeImageItems => {
+                    //normalize url for server
+                    storeImageItems = storeImageItems.map(image => {
+                        let storeImage: StoreImage = { ...image };
+                        storeImage.img = `${API_URL}/images/${storeImage.name}`
+                        return storeImage;
+                    });
+                    this._storeImageItemsBS.next(storeImageItems);
+                });
+            }
+
+        );
+    }
 }

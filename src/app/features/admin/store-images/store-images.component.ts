@@ -23,7 +23,6 @@ export class StoreImagesComponent implements OnInit {
     this.storeImageItems$ = this.storeImageService.getItems();
   }
 
-
   onSelectedFiles(event: any) {
     if (event.target.files.length > 0) {
       const file = event.target.files;
@@ -43,13 +42,13 @@ export class StoreImagesComponent implements OnInit {
     this.storeImageService.addItems(formData);
   }
 
-
   simulateInputFileClick() {
     this.uploadFileInput.nativeElement.click();
   }
 
-  
-
+  onDeleteStoreImage(storeImage: StoreImage): void {
+    this.storeImageService.deleteItem(storeImage);
+  }
 }
 
 

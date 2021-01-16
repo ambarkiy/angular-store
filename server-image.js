@@ -60,7 +60,19 @@ app.get('/store-images', function (req, res, next) {
     res.send(storeImageItems);
     res.end();
   });
-})
+});
+
+app.delete('/store-images/:id', function (req, res, next) {
+  const fs = require('fs');
+  const path = `./public/images/${req.params.id}`;
+
+  try {
+    fs.unlinkSync(path);
+    res.end();
+  } catch (err) {
+    console.error(err)
+  }
+});
 
 app.listen(port, () => {
   console.log('listening to the port: ' + port);
