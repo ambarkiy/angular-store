@@ -1,5 +1,5 @@
 import { AuthorizationGuard } from "./guards";
-import { Link, LinkSection, Store, StoreItem, User } from "./models";
-import { StoreService, UserService } from "./services";
+import { Link, LinkSection, Store, StoreImage, StoreItem, User } from "./models";
+import { StoreImageService, StoreService, UserService } from "./services";
 
-export {StoreService, Store, Link, LinkSection, StoreItem, User, UserService, AuthorizationGuard}
+export { StoreService, Store, Link, LinkSection, StoreItem, User, StoreImage, UserService, AuthorizationGuard, StoreImageService }

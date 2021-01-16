@@ -24,6 +24,10 @@ export class StoreService {
     });
 
     this.httpClient.get<StoreItem[]>(`${API_URL}/store-items`).toPromise().then(storeItems => {
+      storeItems = storeItems.map(item => {
+        item.img = `${API_URL}/images/${item.img || 'place-holder.png'}`;
+        return item;
+      });
       this._storeItemsBS.next(storeItems);
     });
 
@@ -56,8 +60,8 @@ export class StoreService {
     });
 
   }
-//TODO : ask if this is the good way
-  updateItem(storeItemId:number, storeItem: StoreItem) {
+  //TODO : ask if this is the good way
+  updateItem(storeItemId: number, storeItem: StoreItem) {
     this.httpClient.patch<StoreItem>(`${API_URL}/store-items/${storeItemId}`, storeItem).toPromise().then(() => {
       this.httpClient.get<StoreItem[]>(`${API_URL}/store-items`).toPromise().then(storeItems => {
         this._storeItemsBS.next(storeItems);

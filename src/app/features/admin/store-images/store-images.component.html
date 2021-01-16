@@ -1,0 +1,18 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="end center">
+    <form [formGroup]="storeImageForm" enctype="multipart/form-data">
+        <input formControlName="file" id="file" name="file" type="file" (change)="onSelectedFiles($event)" multiple hidden
+            #uploadFileInput>
+        <button color="accent" mat-stroked-button (click)="simulateInputFileClick($event)" type="button">
+            AJOUTER DES PHOTOS
+            <mat-icon>add_a_photo </mat-icon>
+        </button>
+    </form>
+</mat-toolbar>
+<ng-container *ngIf="storeImageItems$ | async as storeImageItems">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem grid">
+        <ng-container *ngFor="let item of storeImageItems ">
+            <app-store-image fxFlex="20%" [storeImage]="item" (delete)="onDeleteStoreImage($event)">
+            </app-store-image>
+        </ng-container>
+    </div>
+</ng-container>
