@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { Link, Store, StoreItem } from '../models';
 
 const API_URL = "http://localhost:4000";
-
+const DEFAUT_IMAGE = 'place-holder.png'
 
 @Injectable({
   providedIn: 'root'
@@ -67,7 +67,16 @@ export class StoreService {
         this._storeItemsBS.next(storeItems);
       });
     });
-
   }
 
+  addItem(storeItem: StoreItem):void {
+    console.log(storeItem)
+    this.httpClient.post<StoreItem>(`${API_URL}/store-items`, storeItem).toPromise().then(() => {
+      this.httpClient.get<StoreItem[]>(`${API_URL}/store-items`).toPromise().then(storeItems => {
+        //normalize url for server
+        storeItems.map(item => item.img = `${API_URL}/images/${item.img || DEFAUT_IMAGE}`);
+        this._storeItemsBS.next(storeItems);
+      });
+    });
+  }
 }

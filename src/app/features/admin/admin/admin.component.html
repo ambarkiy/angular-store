@@ -1,3 +1,10 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="end center">
+        <button color="accent" mat-stroked-button (click)="addStoreItem($event)" type="button" [routerLink]="['/admin/store-item-add']">
+            AJOUTER UN ARTICLE
+            <mat-icon>add </mat-icon>
+        </button>
+</mat-toolbar>
+
 <ng-container *ngIf="storeItems$ | async as storeItems">
     <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" fxLayoutGap="1rem grid">
         <ng-container *ngFor="let storeItem of storeItems">

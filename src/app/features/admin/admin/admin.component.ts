@@ -10,11 +10,16 @@ import { StoreService } from '../../../domain/services';
 })
 export class AdminComponent implements OnInit {
   storeItems$: Observable<StoreItem[] | null>;
-  
+
 
   constructor(private storeService: StoreService) { }
 
   ngOnInit(): void {
-    this.storeItems$ =this.storeService.getItems(); 
+    this.storeItems$ = this.storeService.getItems();
+  }
+
+
+  addStoreItem(storeItem: StoreItem): void {
+    this.storeService.addItem(storeItem);
   }
 }

@@ -7,9 +7,10 @@ import { StoreItemEditComponent } from './store-item-edit/store-item-edit.compon
 import { StoreItemEditFormComponent } from './store-item-edit-form/store-item-edit-form.component';
 import { StoreImagesComponent } from './store-images/store-images.component';
 import { StoreImageComponent } from './store-image/store-image.component';
+import { StoreItemAddFormComponent } from './store-item-add-form/store-item-add-form.component';
 
 @NgModule({
-  declarations: [AdminComponent, StoreEditFormComponent, StoreItemEditComponent, StoreItemEditFormComponent, StoreImagesComponent, StoreImageComponent],
+  declarations: [AdminComponent, StoreEditFormComponent, StoreItemEditComponent, StoreItemEditFormComponent, StoreImagesComponent, StoreImageComponent, StoreItemAddFormComponent],
   imports: [
     SharedModule,
     AdminRoutingModule

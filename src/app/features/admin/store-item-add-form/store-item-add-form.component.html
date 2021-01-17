@@ -1,0 +1,24 @@
+<div fxLayout="column">
+    <mat-toolbar color="primary">
+        Informations de l'article
+    </mat-toolbar>
+        <form [formGroup]="storeItemEditForm" fxLayout="column" (ngSubmit)="onSubmit()">
+            <div fxLayout="column">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nom de l'article</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Prix</mat-label>
+                    <input matInput formControlName="price">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Description</mat-label>
+                    <input matInput formControlName="description">
+                </mat-form-field>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <button mat-raised-button type="submit" color="accent">AJOUTER<mat-icon>save</mat-icon></button>
+                </div>
+            </div>
+        </form>
+</div>
